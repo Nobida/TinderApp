@@ -20,6 +20,8 @@
 		34561E9F26BF5D690000B9B7 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 34561E9E26BF5D690000B9B7 /* RxSwift */; };
 		34561EA126BF5D690000B9B7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 34561EA026BF5D690000B9B7 /* RxCocoa */; };
 		34561EA326BF5D690000B9B7 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 34561EA226BF5D690000B9B7 /* RxRelay */; };
+		34561EAB26BF9F9E0000B9B7 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34561EAA26BF9F9E0000B9B7 /* UIView-Extension.swift */; };
+		34561EB026BFA7F40000B9B7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34561EAF26BFA7F40000B9B7 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		34561E8126BD74A10000B9B7 /* BottomControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControllerView.swift; sourceTree = "<group>"; };
 		34561E9026BE5EE90000B9B7 /* UIImage-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
 		34561E9826BEAEF20000B9B7 /* TopControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopControlView.swift; sourceTree = "<group>"; };
+		34561EAA26BF9F9E0000B9B7 /* UIView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
+		34561EAF26BFA7F40000B9B7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,7 @@
 			children = (
 				34561E8126BD74A10000B9B7 /* BottomControllerView.swift */,
 				34561E9826BEAEF20000B9B7 /* TopControlView.swift */,
+				34561EAF26BFA7F40000B9B7 /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				34561E9026BE5EE90000B9B7 /* UIImage-Extension.swift */,
+				34561EAA26BF9F9E0000B9B7 /* UIView-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -304,8 +310,10 @@
 				34561E9926BEAEF20000B9B7 /* TopControlView.swift in Sources */,
 				3425ADA326BD69B400881831 /* HomeViewController.swift in Sources */,
 				34561E8226BD74A10000B9B7 /* BottomControllerView.swift in Sources */,
+				34561EAB26BF9F9E0000B9B7 /* UIView-Extension.swift in Sources */,
 				3425AD9F26BD69B400881831 /* AppDelegate.swift in Sources */,
 				3425ADA126BD69B400881831 /* SceneDelegate.swift in Sources */,
+				34561EB026BFA7F40000B9B7 /* CardView.swift in Sources */,
 				34561E9126BE5EE90000B9B7 /* UIImage-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

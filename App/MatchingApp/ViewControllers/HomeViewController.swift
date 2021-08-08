@@ -11,40 +11,32 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         view.backgroundColor = .white
         
-        let view1 = TopControlView()
-
-        
-        let view2 = UIView()
-        view2.backgroundColor = .blue
-        
+        let topControlView = TopControlView()
+        let cardView = CardView() // cardView
         let bottomControlView = BottomControlView()
         
-        
-        let stackView = UIStackView(arrangedSubviews: [view1, view2, bottomControlView])
+        let stackView = UIStackView(arrangedSubviews: [topControlView, cardView, bottomControlView])
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical //垂直排列
-        
+        stackView.axis = .vertical
         
         self.view.addSubview(stackView)
         
-        //内容を設置する
-        
         [
-            view1.heightAnchor.constraint(equalToConstant: 100), //高さを設定する
+            topControlView.heightAnchor.constraint(equalToConstant: 100),
             bottomControlView.heightAnchor.constraint(equalToConstant: 120),
             
-            
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            stackView.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor),
+            stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             stackView.leftAnchor.constraint(equalTo: view.leftAnchor),
             stackView.rightAnchor.constraint(equalTo: view.rightAnchor)]
-        .forEach{ $0.isActive = true}
+            .forEach { $0.isActive = true }
+                
         
+        // Do any additional setup after loading the view.
     }
-
 
 }
 
