@@ -16,9 +16,9 @@ class RegisterButton: UIButton {
         }
     }
     
-    init() {
+    init(text: String) {
         super.init(frame: .zero)
-        setTitle("登録", for: .normal)
+        setTitle(text, for: .normal)
         backgroundColor = .red
         setTitleColor(.white, for: .normal)
         layer.cornerRadius = 10

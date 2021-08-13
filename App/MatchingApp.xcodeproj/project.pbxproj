@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		341DEEAC26C62C5B00D0AEF0 /* Firebase-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341DEEAB26C62C5B00D0AEF0 /* Firebase-Extension.swift */; };
+		341DEEB126C62D6200D0AEF0 /* RegiserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341DEEB026C62D6200D0AEF0 /* RegiserViewModel.swift */; };
+		341DEEB926C643D400D0AEF0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341DEEB826C643D400D0AEF0 /* LoginViewController.swift */; };
+		341DEEBF26C6722C00D0AEF0 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 341DEEBE26C6722C00D0AEF0 /* PKHUD */; };
+		341DEEC526C676C500D0AEF0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341DEEC426C676C500D0AEF0 /* User.swift */; };
 		3425AD9F26BD69B400881831 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425AD9E26BD69B400881831 /* AppDelegate.swift */; };
 		3425ADA126BD69B400881831 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425ADA026BD69B400881831 /* SceneDelegate.swift */; };
 		3425ADA326BD69B400881831 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425ADA226BD69B400881831 /* HomeViewController.swift */; };
@@ -55,6 +60,10 @@
 
 /* Begin PBXFileReference section */
 		0536F5C72C4F4A80A39D0180 /* Pods-MatchingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.release.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.release.xcconfig"; sourceTree = "<group>"; };
+		341DEEAB26C62C5B00D0AEF0 /* Firebase-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase-Extension.swift"; sourceTree = "<group>"; };
+		341DEEB026C62D6200D0AEF0 /* RegiserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegiserViewModel.swift; sourceTree = "<group>"; };
+		341DEEB826C643D400D0AEF0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		341DEEC426C676C500D0AEF0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3425AD9B26BD69B400881831 /* MatchingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3425AD9E26BD69B400881831 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3425ADA026BD69B400881831 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +109,7 @@
 				34561EA326BF5D690000B9B7 /* RxRelay in Frameworks */,
 				34561EA126BF5D690000B9B7 /* RxCocoa in Frameworks */,
 				34561E9F26BF5D690000B9B7 /* RxSwift in Frameworks */,
+				341DEEBF26C6722C00D0AEF0 /* PKHUD in Frameworks */,
 				997089A014A18268FA9A83A5 /* Pods_MatchingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +133,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		341DEEA226C62B3E00D0AEF0 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				341DEEB026C62D6200D0AEF0 /* RegiserViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		341DEEC326C676B900D0AEF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				341DEEC426C676C500D0AEF0 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3425AD9226BD69B400881831 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +174,7 @@
 		3425AD9D26BD69B400881831 /* MatchingApp */ = {
 			isa = PBXGroup;
 			children = (
+				341DEEC326C676B900D0AEF0 /* Models */,
 				34561E8F26BE5E980000B9B7 /* Extensions */,
 				34561E8026BD747C0000B9B7 /* Views */,
 				34561E7F26BD744A0000B9B7 /* ViewControllers */,
@@ -184,6 +211,7 @@
 			children = (
 				3425ADA226BD69B400881831 /* HomeViewController.swift */,
 				34561EDD26C224C50000B9B7 /* RegisterViewController.swift */,
+				341DEEB826C643D400D0AEF0 /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +219,7 @@
 		34561E8026BD747C0000B9B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				341DEEA226C62B3E00D0AEF0 /* viewModel */,
 				3482D57126C255D60036A75D /* Register */,
 				348DAB7B26C2515800AAAB28 /* Home */,
 			);
@@ -204,6 +233,7 @@
 				34561EAA26BF9F9E0000B9B7 /* UIView-Extension.swift */,
 				34561EB426C0BDFF0000B9B7 /* UIColor-Extension.swift */,
 				34561EC326C1151F0000B9B7 /* UIButton-Extension.swift */,
+				341DEEAB26C62C5B00D0AEF0 /* Firebase-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -275,6 +305,7 @@
 				34561E9E26BF5D690000B9B7 /* RxSwift */,
 				34561EA026BF5D690000B9B7 /* RxCocoa */,
 				34561EA226BF5D690000B9B7 /* RxRelay */,
+				341DEEBE26C6722C00D0AEF0 /* PKHUD */,
 			);
 			productName = MatchingApp;
 			productReference = 3425AD9B26BD69B400881831 /* MatchingApp.app */;
@@ -352,6 +383,7 @@
 			mainGroup = 3425AD9226BD69B400881831;
 			packageReferences = (
 				34561E9D26BF5D690000B9B7 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				341DEEBD26C6722C00D0AEF0 /* XCRemoteSwiftPackageReference "PKHUD" */,
 			);
 			productRefGroup = 3425AD9C26BD69B400881831 /* Products */;
 			projectDirPath = "";
@@ -503,11 +535,15 @@
 				3482D56726C254B10036A75D /* CardInfoLabel.swift in Sources */,
 				3425ADA326BD69B400881831 /* HomeViewController.swift in Sources */,
 				3482D57B26C25C880036A75D /* RegisterTitleLabel.swift in Sources */,
+				341DEEB926C643D400D0AEF0 /* LoginViewController.swift in Sources */,
 				34561EAB26BF9F9E0000B9B7 /* UIView-Extension.swift in Sources */,
 				34561EB526C0BDFF0000B9B7 /* UIColor-Extension.swift in Sources */,
 				3425AD9F26BD69B400881831 /* AppDelegate.swift in Sources */,
+				341DEEC526C676C500D0AEF0 /* User.swift in Sources */,
 				3482D56C26C254C60036A75D /* TopControlView.swift in Sources */,
+				341DEEAC26C62C5B00D0AEF0 /* Firebase-Extension.swift in Sources */,
 				3482D55D26C254840036A75D /* CardView.swift in Sources */,
+				341DEEB126C62D6200D0AEF0 /* RegiserViewModel.swift in Sources */,
 				3482D55826C2546B0036A75D /* BottomControllerView.swift in Sources */,
 				34561EC426C1151F0000B9B7 /* UIButton-Extension.swift in Sources */,
 				3482D56226C2549B0036A75D /* CardImageView.swift in Sources */,
@@ -841,6 +877,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		341DEEBD26C6722C00D0AEF0 /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
 		34561E9D26BF5D690000B9B7 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -852,6 +896,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		341DEEBE26C6722C00D0AEF0 /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 341DEEBD26C6722C00D0AEF0 /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
+		};
 		34561E9E26BF5D690000B9B7 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 34561E9D26BF5D690000B9B7 /* XCRemoteSwiftPackageReference "RxSwift" */;
