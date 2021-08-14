@@ -12,6 +12,11 @@
 		341DEEB926C643D400D0AEF0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341DEEB826C643D400D0AEF0 /* LoginViewController.swift */; };
 		341DEEBF26C6722C00D0AEF0 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 341DEEBE26C6722C00D0AEF0 /* PKHUD */; };
 		341DEEC526C676C500D0AEF0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341DEEC426C676C500D0AEF0 /* User.swift */; };
+		341DEECD26C7251600D0AEF0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341DEECC26C7251600D0AEF0 /* ProfileViewController.swift */; };
+		341DEED326C727C100D0AEF0 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341DEED226C727C100D0AEF0 /* ProfileImageView.swift */; };
+		341DEEDB26C72B9F00D0AEF0 /* ProfileLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341DEEDA26C72B9F00D0AEF0 /* ProfileLabel.swift */; };
+		341DEEE026C74F2A00D0AEF0 /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341DEEDF26C74F2A00D0AEF0 /* ProfileTextField.swift */; };
+		341DEEE626C7500600D0AEF0 /* InfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341DEEE526C7500600D0AEF0 /* InfoCollectionViewCell.swift */; };
 		3425AD9F26BD69B400881831 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425AD9E26BD69B400881831 /* AppDelegate.swift */; };
 		3425ADA126BD69B400881831 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425ADA026BD69B400881831 /* SceneDelegate.swift */; };
 		3425ADA326BD69B400881831 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425ADA226BD69B400881831 /* HomeViewController.swift */; };
@@ -64,6 +69,11 @@
 		341DEEB026C62D6200D0AEF0 /* RegiserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegiserViewModel.swift; sourceTree = "<group>"; };
 		341DEEB826C643D400D0AEF0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		341DEEC426C676C500D0AEF0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		341DEECC26C7251600D0AEF0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		341DEED226C727C100D0AEF0 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		341DEEDA26C72B9F00D0AEF0 /* ProfileLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLabel.swift; sourceTree = "<group>"; };
+		341DEEDF26C74F2A00D0AEF0 /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextField.swift; sourceTree = "<group>"; };
+		341DEEE526C7500600D0AEF0 /* InfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		3425AD9B26BD69B400881831 /* MatchingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3425AD9E26BD69B400881831 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3425ADA026BD69B400881831 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +159,24 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		341DEED126C7279200D0AEF0 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				341DEED226C727C100D0AEF0 /* ProfileImageView.swift */,
+				341DEEDA26C72B9F00D0AEF0 /* ProfileLabel.swift */,
+				341DEEDF26C74F2A00D0AEF0 /* ProfileTextField.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		341DEEE426C74FEC00D0AEF0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				341DEEE526C7500600D0AEF0 /* InfoCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3425AD9226BD69B400881831 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +202,7 @@
 		3425AD9D26BD69B400881831 /* MatchingApp */ = {
 			isa = PBXGroup;
 			children = (
+				341DEEE426C74FEC00D0AEF0 /* Cells */,
 				341DEEC326C676B900D0AEF0 /* Models */,
 				34561E8F26BE5E980000B9B7 /* Extensions */,
 				34561E8026BD747C0000B9B7 /* Views */,
@@ -212,6 +241,7 @@
 				3425ADA226BD69B400881831 /* HomeViewController.swift */,
 				34561EDD26C224C50000B9B7 /* RegisterViewController.swift */,
 				341DEEB826C643D400D0AEF0 /* LoginViewController.swift */,
+				341DEECC26C7251600D0AEF0 /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -219,6 +249,7 @@
 		34561E8026BD747C0000B9B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				341DEED126C7279200D0AEF0 /* Profile */,
 				341DEEA226C62B3E00D0AEF0 /* viewModel */,
 				3482D57126C255D60036A75D /* Register */,
 				348DAB7B26C2515800AAAB28 /* Home */,
@@ -531,6 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				341DEEE626C7500600D0AEF0 /* InfoCollectionViewCell.swift in Sources */,
 				3482D58026C391B70036A75D /* RegisterButton.swift in Sources */,
 				3482D56726C254B10036A75D /* CardInfoLabel.swift in Sources */,
 				3425ADA326BD69B400881831 /* HomeViewController.swift in Sources */,
@@ -542,13 +574,17 @@
 				341DEEC526C676C500D0AEF0 /* User.swift in Sources */,
 				3482D56C26C254C60036A75D /* TopControlView.swift in Sources */,
 				341DEEAC26C62C5B00D0AEF0 /* Firebase-Extension.swift in Sources */,
+				341DEEE026C74F2A00D0AEF0 /* ProfileTextField.swift in Sources */,
 				3482D55D26C254840036A75D /* CardView.swift in Sources */,
 				341DEEB126C62D6200D0AEF0 /* RegiserViewModel.swift in Sources */,
 				3482D55826C2546B0036A75D /* BottomControllerView.swift in Sources */,
 				34561EC426C1151F0000B9B7 /* UIButton-Extension.swift in Sources */,
 				3482D56226C2549B0036A75D /* CardImageView.swift in Sources */,
+				341DEED326C727C100D0AEF0 /* ProfileImageView.swift in Sources */,
+				341DEEDB26C72B9F00D0AEF0 /* ProfileLabel.swift in Sources */,
 				3482D57326C255F30036A75D /* RegisterTextField.swift in Sources */,
 				3425ADA126BD69B400881831 /* SceneDelegate.swift in Sources */,
+				341DEECD26C7251600D0AEF0 /* ProfileViewController.swift in Sources */,
 				34561EDE26C224C50000B9B7 /* RegisterViewController.swift in Sources */,
 				34561E9126BE5EE90000B9B7 /* UIImage-Extension.swift in Sources */,
 			);

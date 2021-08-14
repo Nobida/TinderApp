@@ -8,6 +8,7 @@
 import Firebase
 import FirebaseAuth
 import FirebaseFirestore
+import FirebaseStorage
 
 // MARK: - Auth
 extension Auth {
@@ -68,24 +69,93 @@ extension Firestore {
         }
     }
     
-    //Firestoreからユーザー情報を獲得
-    static func fetchUserFromFirestore(uid: String, completion: @escaping (User?) -> Void) {
+
+    
+    // Firestoreからユーザー情報を取得
+    static func fetchUserFromFirestore(uid: String, compeltion: @escaping (User?) -> Void) {
         
-        Firestore.firestore().collection("users").document(uid).getDocument {
-            (snapshot, err) in
+        
+        Firestore.firestore().collection("users").document(uid).addSnapshotListener { (snapshot, err) in
             if let err = err {
-                print("ユーザー情報の獲得に失敗：", err)
-                completion(nil)
+                print("ユーザー情報の取得に失敗: ", err)
+                compeltion(nil)
                 return
             }
             
             guard let dic = snapshot?.data() else { return }
             let user = User(dic: dic)
-            completion(user)
+            compeltion(user)
         }
     }
     
+    // Firestoreから自分以外のユーザー情報を取得
+    static func fecthUsersFromFirestore(completion: @escaping ([User]) -> Void) {
+        
+        Firestore.firestore().collection("users").getDocuments { (snapshots, err) in
+            if let err = err {
+                print("ユーザー情報の取得に失敗: ", err)
+                return
+            }
+            
+            let users = snapshots?.documents.map({ (snapshot) -> User in
+                let dic = snapshot.data()
+                let user = User(dic: dic)
+                return user
+            })
+            
+            completion(users ?? [User]())
+        }
+    }
     
+    // ユーザー情報の更新
+    static func updateUserInfo(dic: [String: Any], compeltion: @escaping () -> Void) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        Firestore.firestore().collection("users").document(uid).updateData(dic) { err in
+            if let err = err {
+                print("ユーザー情報の更新に失敗: ", err)
+                return
+            }
+            
+            compeltion()
+            print("ユーザー情報の更新に成功")
+        }
+    }
     
 }
 
+// MARK: - Storage
+extension Storage {
+    
+    // ユーザーの情報をFireStorageに保存
+    static func addProfileImageToStorage(image: UIImage, dic: [String: Any], completion: @escaping () -> Void) {
+        guard let uploadImage = image.jpegData(compressionQuality: 0.3) else { return }
+        
+        let filename = NSUUID().uuidString
+        let storageRef = Storage.storage().reference().child("profile_image").child(filename)
+        
+        storageRef.putData(uploadImage, metadata: nil) { (metadata, error) in
+            
+            if let err = error {
+                print("画像の保存に失敗しました。: ", err)
+                return
+            }
+            
+            storageRef.downloadURL { (url, error) in
+                if let err = error {
+                    print("画像の取得に失敗: ", err)
+                    return
+                }
+                
+                guard let urlString = url?.absoluteString else { return }
+                var dicWithImage = dic
+                dicWithImage["profileImageUrl"] = urlString
+                
+                Firestore.updateUserInfo(dic: dicWithImage) {
+                    completion()
+                }
+            }
+        }
+    }
+    
+}
