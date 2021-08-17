@@ -9,6 +9,7 @@ import UIKit
 
 class RegisterTextField: UITextField {
     
+    //no initial value
     init(placeHolder: String) {
         super.init(frame: .zero)
         

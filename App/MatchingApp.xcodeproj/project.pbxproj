@@ -17,6 +17,7 @@
 		341DEEDB26C72B9F00D0AEF0 /* ProfileLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341DEEDA26C72B9F00D0AEF0 /* ProfileLabel.swift */; };
 		341DEEE026C74F2A00D0AEF0 /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341DEEDF26C74F2A00D0AEF0 /* ProfileTextField.swift */; };
 		341DEEE626C7500600D0AEF0 /* InfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341DEEE526C7500600D0AEF0 /* InfoCollectionViewCell.swift */; };
+		341DEEEF26C8713D00D0AEF0 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 341DEEEE26C8713D00D0AEF0 /* SDWebImage */; };
 		3425AD9F26BD69B400881831 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425AD9E26BD69B400881831 /* AppDelegate.swift */; };
 		3425ADA126BD69B400881831 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425ADA026BD69B400881831 /* SceneDelegate.swift */; };
 		3425ADA326BD69B400881831 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3425ADA226BD69B400881831 /* HomeViewController.swift */; };
@@ -116,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				341DEEEF26C8713D00D0AEF0 /* SDWebImage in Frameworks */,
 				34561EA326BF5D690000B9B7 /* RxRelay in Frameworks */,
 				34561EA126BF5D690000B9B7 /* RxCocoa in Frameworks */,
 				34561E9F26BF5D690000B9B7 /* RxSwift in Frameworks */,
@@ -337,6 +339,7 @@
 				34561EA026BF5D690000B9B7 /* RxCocoa */,
 				34561EA226BF5D690000B9B7 /* RxRelay */,
 				341DEEBE26C6722C00D0AEF0 /* PKHUD */,
+				341DEEEE26C8713D00D0AEF0 /* SDWebImage */,
 			);
 			productName = MatchingApp;
 			productReference = 3425AD9B26BD69B400881831 /* MatchingApp.app */;
@@ -415,6 +418,7 @@
 			packageReferences = (
 				34561E9D26BF5D690000B9B7 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				341DEEBD26C6722C00D0AEF0 /* XCRemoteSwiftPackageReference "PKHUD" */,
+				341DEEED26C8713D00D0AEF0 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 3425AD9C26BD69B400881831 /* Products */;
 			projectDirPath = "";
@@ -921,6 +925,14 @@
 				minimumVersion = 5.4.0;
 			};
 		};
+		341DEEED26C8713D00D0AEF0 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
 		34561E9D26BF5D690000B9B7 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -936,6 +948,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 341DEEBD26C6722C00D0AEF0 /* XCRemoteSwiftPackageReference "PKHUD" */;
 			productName = PKHUD;
+		};
+		341DEEEE26C8713D00D0AEF0 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 341DEEED26C8713D00D0AEF0 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 		34561E9E26BF5D690000B9B7 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
